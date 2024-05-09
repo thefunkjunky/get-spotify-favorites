@@ -4,7 +4,7 @@ Gets a Spotify user's saved albums and returns their respective urls
 ## Pre-Installation Setup
 1. Create Spotify developer account
 1. Add an application to your developer account (https://developer.spotify.com/documentation/web-api/tutorials/getting-started)
-1. Get your application's client_id and client-secret
+1. Get your application's client_id and client_secret
 1. If using MacOs, install homebrew in your Terminal app (https://brew.sh/)
 1. Install zotify (https://github.com/zotify-dev/zotify/blob/main/INSTALLATION.md)
 1. Configure Zotify (https://github.com/zotify-dev/zotify/blob/main/README.md#configuration). Note that you should set the root path, the output format, and select the audio quality (if you're a premium user, you can get high quality lossless files).
