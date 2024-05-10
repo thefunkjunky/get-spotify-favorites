@@ -25,11 +25,18 @@ def main():
     default="http://localhost:3000",
     help="Application redirect URI"
   )
-  parser.add_argument(
-    "--get_liked_tracks",
+  group = parser.add_mutually_exclusive_group(required=True)
+  group.add_argument(
+    "--tracks",
     action="store_true",
     default=False,
-    help="Return user's liked tracks instead of albums."
+    help="Return user's liked tracks."
+  )
+  group.add_argument(
+    "--albums",
+    action="store_true",
+    default=False,
+    help="Return user's saved albums."
   )
   args = parser.parse_args()
 
@@ -55,7 +62,7 @@ def main():
       return_function = sp.current_user_saved_albums
     while len(return_function(limit=limit, offset=offset)["items"]) > 0:
       for record in return_function(limit=limit, offset=offset)["items"]:
-        if args.get_liked_tracks:
+        if args.tracks:
           uris.append(record["track"]["external_urls"]["spotify"])
         else:
           uris.append(record["album"]["external_urls"]["spotify"])
