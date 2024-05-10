@@ -1,5 +1,5 @@
 # get-spotify-favorites
-Gets a Spotify user's saved albums or tracks and returns their respective urls
+Gets a Spotify user's saved albums and returns their respective urls
 
 ## Pre-Installation Setup
 1. Create Spotify developer account
@@ -27,10 +27,10 @@ client_secret = "[client_secret]"
 
 ## Usage
 ```
-└─▶ python3 get-spotify-albums.py --help
-usage: get-spotify-albums.py [-h] [--config_file CONFIG_FILE]
-                             [--redirect_uri REDIRECT_URI]
-                             [--get_liked_tracks]
+└─▶ python3 get-spotify-favorites.py --help
+usage: get-spotify-favorites.py [-h] [--config_file CONFIG_FILE]
+                                [--redirect_uri REDIRECT_URI]
+                                (--tracks | --albums)
 
 Generate and/or execute new terraform environments.
 
@@ -41,15 +41,16 @@ options:
                         credentials.
   --redirect_uri REDIRECT_URI
                         Application redirect URI
-  --get_liked_tracks    Return user's liked tracks instead of albums
+  --tracks              Return user's liked tracks.
+  --albums              Return user's saved albums.
 ```
 
 ### Download tracks
-1. Output the URIs from the script above to a file:
+1. Output the URIs from the script above to a file (ex: saved albums)
 ```
-python3 get-spotify-albums.py > uris.txt
+python3 get-spotify-favorites.py --albums > uris.txt
 ```
-1. Use zotify with URIs list:
+2. Use zotify with URIs list:
 ```
 zotify -d [path to uris list]
 ```
