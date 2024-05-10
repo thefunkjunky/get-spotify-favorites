@@ -1,5 +1,5 @@
 # get-spotify-favorites
-Gets a Spotify user's saved albums and returns their respective urls
+Gets a Spotify user's saved albums or liked tracks and returns their respective urls
 
 ## Pre-Installation Setup
 1. Create Spotify developer account
