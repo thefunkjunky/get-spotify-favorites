@@ -47,13 +47,13 @@ options:
 
 ### Download tracks
 1. Output the URIs from the script above to a file (ex: saved albums)
-  ```
+```
 python3 get-spotify-favorites.py --albums > uris.txt
-  ```
-1. Use zotify with URIs list:
-  ```
-  zotify -d [path to uris list]
-  ```
+```
+2. Use zotify with URIs list:
+```
+zotify -d [path to uris list]
+```
 
 ## Contributors
 - Garrett Anderson <garrett@devnull.rip>
