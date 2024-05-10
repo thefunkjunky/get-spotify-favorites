@@ -46,13 +46,13 @@ options:
 
 ### Download tracks
 1. Output the URIs from the script above to a file:
-    ```
+```
 python3 get-spotify-albums.py > uris.txt
-    ```
+```
 1. Use zotify with URIs list:
-    ```
-  zotify -d [path to uris list]
-    ```
+```
+zotify -d [path to uris list]
+```
 
 ## Contributors
 - Garrett Anderson <garrett@devnull.rip>
