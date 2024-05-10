@@ -1,4 +1,4 @@
-# get-spotify-saved-albums
+# get-spotify-favorites
 Gets a Spotify user's saved albums and returns their respective urls
 
 ## Pre-Installation Setup
