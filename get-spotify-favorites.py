@@ -10,7 +10,7 @@ from spotipy.oauth2 import SpotifyOAuth
 def main():
   """The meat and potatoes"""
   parser = argparse.ArgumentParser(
-    description="Generate and/or execute new terraform environments."
+    description="Generate your Spotify liked tracks or album urls"
   )
   parser.add_argument(
     "--config_file",
