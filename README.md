@@ -32,7 +32,7 @@ usage: get-spotify-favorites.py [-h] [--config_file CONFIG_FILE]
                                 [--redirect_uri REDIRECT_URI]
                                 (--tracks | --albums)
 
-Generate and/or execute new terraform environments.
+Generate your Spotify liked tracks or album urls.
 
 options:
   -h, --help            show this help message and exit
