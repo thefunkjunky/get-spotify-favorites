@@ -55,12 +55,12 @@ def main():
     offset = 0
     limit = 50
     uris = []
-    if args.get_liked_tracks:
+    if args.tracks:
       return_function = sp.current_user_saved_tracks
     else:
       return_function = sp.current_user_saved_albums
-    while len(return_function(limit=limit, offset=offset)["items"]) > 0:
-      for record in return_function(limit=limit, offset=offset)["items"]:
+    while len(records := return_function(limit=limit, offset=offset)["items"]) > 0:
+      for record in records:
         if args.tracks:
           uris.append(record["track"]["external_urls"]["spotify"])
         else:
